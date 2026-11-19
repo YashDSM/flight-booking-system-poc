@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ChangeFeatures
-    Created on : Nov 6, 2017, 3:11:55 PM
-    Author     : MuhammadHarris
---%>
-
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="models.Features"%>

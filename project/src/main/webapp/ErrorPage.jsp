@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ErrorPage
-    Created on : Nov 7, 2017, 2:19:06 AM
-    Author     : MuhammadHarris
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

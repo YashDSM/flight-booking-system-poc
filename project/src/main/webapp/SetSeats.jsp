@@ -1,9 +1,3 @@
-<%-- 
-    Document   : SetSeats
-    Created on : Nov 6, 2017, 6:58:27 PM
-    Author     : MuhammadHarris
---%>
-
 <%@page import="models.Flight"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
