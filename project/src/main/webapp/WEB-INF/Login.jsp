@@ -16,7 +16,7 @@
     </head>
 	
 	
-  <body style="background: -webkit-radial-gradient(rgb(136, 15, 159), rgb(6, 19, 31));  background: radial-gradient(rgb(136, 15, 159), rgb(6, 19, 31)); background:url('./assets/img/sign.jpg');height:100%; min-height:100%;margin:0;padding:0;">  
+  <body style="background:url('./assets/img/sign.jpg');height:100%; min-height:100%;margin:0;padding:0;">  
 
 
             <jsp:include page="../Templates/AdminHeader.jsp"/>

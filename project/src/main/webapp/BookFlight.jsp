@@ -20,7 +20,7 @@
 	
 	
 
-  <body style="background: -webkit-radial-gradient(rgb(136, 15, 159), rgb(6, 19, 31));  background: radial-gradient(rgb(136, 15, 159), rgb(6, 19, 31)); background:url('./assets/img/main.jpg');">  
+  <body style="background:url('./assets/img/main.jpg');">  
 
       <jsp:include page="Templates/CustomerHeader.jsp"/>
       

@@ -1,9 +1,8 @@
             
 <header>
-        <nav class="navbar navbar-expand-md navbar-dark font-weight-bold nav justify-content-center nav-justified" style="background:url('./assets/img/nav.jpg'); border:3px solid black;">
+        <nav class="navbar navbar-expand-md font-weight-bold nav justify-content-center nav-justified" style="border:3px solid black;">
                 <a class="navbar-brand" href="home.jsp">
-                        <img src="https://turkishairlines.ssl.cdn.sdlmedia.com/636373437847588165FE.png" alt="Skyline Airlines Logo">
-                        <img src="https://turkishairlines.ssl.cdn.sdlmedia.com/636373437818057738TL.png" alt="Img Logo">				
+                       <img src="./assets/img/skyline-logo.png"  width="50" height="50" alt="Skyline Airlines Logo">	
                 </a>
         </nav>
 </header>
