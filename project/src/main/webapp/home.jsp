@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://www-turkishairlines.akamaized.net/theme/img/icons/favicon.ico">
-    <title>Turkish Airlines</title>
+    <title>Skyline Airlines</title>
 
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -24,7 +24,7 @@
 	<!--Navigation Bar-->
     <nav class="navbar navbar-expand-md navbar-dark font-weight-bold nav justify-content-center nav-justified" style="background:url('./assets/img/nav.jpg'); border:3px solid black;">
       <a class="navbar-brand" href="home.jsp">
-	  	<img src="https://turkishairlines.ssl.cdn.sdlmedia.com/636373437847588165FE.png" alt="Turkish Airlines Logo">
+	  	<img src="https://turkishairlines.ssl.cdn.sdlmedia.com/636373437847588165FE.png" alt="Skyline Airlines Logo">
 		<img src="https://turkishairlines.ssl.cdn.sdlmedia.com/636373437818057738TL.png" alt="Img Logo">				
 	  </a>
 	  
@@ -57,7 +57,7 @@
 		<div class="carousel-item active">
 			<img class="d-block" src="./assets/img/main.jpg" alt="First slide">
 			<div class="carousel-caption d-md-block text-top">
-				<h1>Welcome to Turkish Airlines!</h1>
+				<h1>Welcome to Skyline Airlines!</h1>
 			</div>
 		</div>
 		
