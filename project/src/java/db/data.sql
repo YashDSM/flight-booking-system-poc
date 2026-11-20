@@ -62,17 +62,19 @@ INSERT INTO Flights
 
 VALUES
 
-    (FALSE, 'SA-101', 10, 7, 'Pune', 'Indore',
+    (FALSE, 'SA-101', 6, 3, 'Pune', 'Indore',
 
      TIMESTAMP '2027-06-15 09:00:00', TIMESTAMP '2027-06-15 10:15:00',
 
-     0, 0, 0, 0, 5, 5, 0);
+     0, 0, 0, 0, 3, 3, 0);
  
 INSERT INTO Seats (seatNumber, customerEmail, featureType, flightName)
 
 VALUES
-
-    (1, 'ashutosh@yash.com', 'Economy', 'SA-101'),
-     (6, 'durgesh@yash.com', 'Business', 'SA-101'),
-      (2, 'customer@yash.com', 'Economy', 'SA-101');
+	(1, 'customer@yash.com', 'Economy', 'SA-101'),
+    (2, 'ashutosh@yash.com', 'Economy', 'SA-101'),
+    (3, NULL, 'Economy', 'SA-101'),
+    (4, 'durgesh@yash.com', 'Business', 'SA-101'),
+    (5, NULL, 'Business', 'SA-101'),
+    (6, NULL, 'Business', 'SA-101');
  

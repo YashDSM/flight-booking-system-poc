@@ -24,52 +24,97 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class SearchFlights extends HttpServlet {
 
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		ArrayList<Flight> flights =
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+				(ArrayList<Flight>) getServletContext().getAttribute("flights");
 
-        ArrayList<Flight> flights = (ArrayList<Flight>) (getServletContext().getAttribute("flights"));
+		ArrayList<Flight> results = new ArrayList<Flight>();
 
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+		String from = request.getParameter("from");
 
-        ArrayList<Flight> results = new ArrayList();
-        
-        /*
-        for (int i = 0; i < flights.size(); i++)
-        {            
-            Flight f = flights.get(i);
-                        
-            if ((f.getDepartureCity().equals(request.getParameter("from"))) && (f.getArrivalCity().equals(request.getParameter("to")))  && (reportDate.equals(request.getParameter("depart"))))
-            {                                
-                if (f.getCurrentSeats() >= Integer.parseInt(request.getParameter("people")))
-                {
-                    if (request.getParameter("class").equals("Economy") && (f.getEconomySeats()>= Integer.parseInt(request.getParameter("people"))))
-                    {
-                        if (!f.isChanged && !Features.isChanged)                        
-                            results.add(f);                                       
-                    }
-                    else if (request.getParameter("class").equals("Business") && (f.getBusinessSeats()>= Integer.parseInt(request.getParameter("people"))))
-                    {
-                        if (!f.isChanged && !Features.isChanged)                        
-                            results.add(f);                                       
-                    }
-                    else if (request.getParameter("class").equals("First") && (f.getFirstSeats()>= Integer.parseInt(request.getParameter("people"))))
-                    {
-                        if (!f.isChanged && !Features.isChanged)                        
-                            results.add(f);                                       
-                    }
-                }
-            }            
-        }
-        */
-        
-        results.add(flights.get(1));
-        request.setAttribute("results", results);
-        request.getRequestDispatcher("ShowFlights.jsp").forward(request,response);
+		String to = request.getParameter("to");
 
-    }
+		String dateText = request.getParameter("depart"); // HTML date input: yyyy-MM-dd
+
+		String travelClass = request.getParameter("class");
+
+		String peopleText = request.getParameter("people");
+
+		try {
+
+			int people = Integer.parseInt(peopleText);
+
+			java.sql.Date requestedDate = java.sql.Date.valueOf(dateText);
+
+			if (flights != null) {
+
+				for (Flight flight : flights) {
+
+					if (flight.getDepartureDate() == null) {
+
+						continue;
+
+					}
+
+					boolean routeMatches =
+
+							flight.getDepartureCity().equalsIgnoreCase(from)
+									&& flight.getArrivalCity().equalsIgnoreCase(to);
+
+					boolean dateMatches =
+
+							flight.getDepartureDate().toLocalDate()
+
+									.equals(requestedDate.toLocalDate());
+
+					boolean enoughSeats;
+
+					if ("Economy".equals(travelClass)) {
+
+						enoughSeats = flight.getEconomySeats() >= people;
+
+					} else if ("Business".equals(travelClass)) {
+
+						enoughSeats = flight.getBusinessSeats() >= people;
+
+					} else if ("First Class".equals(travelClass)) {
+
+						enoughSeats = flight.getFirstSeats() >= people;
+
+					} else {
+
+						enoughSeats = false;
+
+					}
+
+					if (routeMatches && dateMatches && enoughSeats && !flight.isChanged && !Features.isChanged) {
+
+						results.add(flight);
+
+					}
+
+				}
+
+			}
+
+		} catch (IllegalArgumentException ex) {
+
+			// Invalid/missing date or passenger count: show no matching results.
+
+			getServletContext().log("Invalid flight-search parameters.", ex);
+
+		}
+
+		request.setAttribute("results", results);
+
+		request.getRequestDispatcher("ShowFlights.jsp")
+
+				.forward(request, response);
+
+	}
 }
