@@ -6,10 +6,6 @@ package models;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author MuhammadHarris
- */
 public abstract class Person {
  
     String name;

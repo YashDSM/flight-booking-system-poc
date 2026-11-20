@@ -8,10 +8,6 @@ import java.util.ArrayList;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author MuhammadHarris
- */
 public class Customer extends Person {
     
     ArrayList<Seat> seats;

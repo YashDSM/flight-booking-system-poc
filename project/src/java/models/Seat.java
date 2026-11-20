@@ -10,10 +10,6 @@ import java.util.ArrayList;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author MuhammadHarris
- */
 public class Seat {
     
     int seatNumber;

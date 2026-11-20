@@ -6,12 +6,6 @@ package models;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author MuhammadHarris
- */
-
-
 public class Features {
     
     static public boolean isChanged = false;

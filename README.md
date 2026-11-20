@@ -5,7 +5,7 @@ A **fully responsive** web-based Flight Booking System for Skyline Airlines base
 ## Technologies Used
 
 * **Frontend:** HTML, CSS, JavaScript, Jquery, Bootstrap, Java Server Pages (JSPs), AJAX (for a Flight Search Widget)
-* **Backend:** Java Servlets, Java Models, Microsoft Access (Database)
+* **Backend:** Java Servlets, Java Models, H2 (Database) - In-Memory with some sample Data
 * **Webservices:** SOAP Web Services (to get price and number of seats)
 * **Security Features:** SQL Injection, Cross-Site Scripting (XSS), Tomcat Roles
 
@@ -82,10 +82,15 @@ the pay button consider the transaction done and mark the seat sold.
 <role rolename="Manager"/>
 <role rolename="Admin"/>
 <role rolename="Customer"/>
-
+ 
 <user username="admin@skyline.com" password="admin" roles="Admin"/>
-<user username="managr@skyline.com" password="managar" roles="Manager"/>
-<user username="customer@skyline.com" password="customer" roles="Customer"/>
+<user username="manager@skyline.com" password="manager" roles="Manager"/>
+<user username="customer@yash.com" password="customer" roles="Customer"/>
+<user username="durgesh@yash.com" password="durgesh" roles="Customer"/>
+<user username="ashutosh@yash.com" password="ashutosh" roles="Customer"/>
+
+ 
+<user username="ide" password="u7m1n52I" roles="manager-script,admin"/>
 ```
 
 <p align="middle">

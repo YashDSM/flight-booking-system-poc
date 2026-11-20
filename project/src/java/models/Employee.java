@@ -5,10 +5,7 @@
  */
 package models;
 
-/**
- *
- * @author MuhammadHarris
- */
+
 public class Employee extends Person {
     
     String employeeDesignation;

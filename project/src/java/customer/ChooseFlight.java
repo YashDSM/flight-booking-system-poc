@@ -24,10 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/**
- *
- * @author MuhammadHarris
- */
+
 public class ChooseFlight extends HttpServlet {
 
 
